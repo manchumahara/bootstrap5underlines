@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Underline Highlight Styles – Complete Collection(AI Generated)</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f0f2f5;
+        }
+
+        /* ── Page Header ── */
+        .page-header {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            padding: 3.5rem 0 2.5rem;
+            margin-bottom: 3rem;
+            border-bottom: 4px solid #0ea5e9;
+        }
+        .page-header h1 { color: #f1f5f9; }
+        .page-header p  { color: #94a3b8; }
+
+        /* ── Demo Cards ── */
+        .demo-box {
+            background: #fff;
+            border-radius: 18px;
+            padding: 36px 28px;
+            box-shadow: 0 6px 24px rgba(0,0,0,.07);
+            height: 100%;
+        }
+
+        .demo-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .badge-num {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            font-size: .65rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            border-radius: 30px;
+            padding: 2px 10px;
+            margin-bottom: .75rem;
+        }
+
+        /* ══════════════════════════════════════════
+           ORIGINAL 8
+        ══════════════════════════════════════════ */
+
+        /* 1. Marker Underline */
+        .underline-marker {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .underline-marker::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 193, 7, 0.5);
+            border-radius: 30px;
+            z-index: -1;
+        }
+
+        /* 2. Gradient Underline */
+        .underline-gradient {
+            background-image: linear-gradient(
+                transparent 70%,
+                #0d6efd 70%
+            );
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 0 4px;
+            color: #0d6efd;
+        }
+
+        /* 3. Rounded Underline */
+        .underline-rounded {
+            position: relative;
+            display: inline-block;
+        }
+        .underline-rounded::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            width: 100%;
+            height: 8px;
+            background: #198754;
+            border-radius: 50px;
+            opacity: .35;
+        }
+
+        /* 4. Brush Underline */
+        .underline-brush {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .underline-brush::after {
+            content: "";
+            position: absolute;
+            left: -2px;
+            bottom: 3px;
+            width: calc(100% + 4px);
+            height: 14px;
+            background: #dc3545;
+            opacity: .25;
+            border-radius: 50% 40% 60% 30%;
+            transform: rotate(-1deg);
+            z-index: -1;
+        }
+
+        /* 5. Double Underline */
+        .underline-double {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .underline-double::before,
+        .underline-double::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            border-radius: 30px;
+        }
+        .underline-double::before {
+            width: 100%;
+            height: 3px;
+            background: #6610f2;
+            bottom: 3px;
+        }
+        .underline-double::after {
+            width: 70%;
+            height: 3px;
+            background: #9b59b6;
+            bottom: -3px;
+        }
+
+        /* 6. Zigzag Underline */
+        .underline-zigzag {
+            text-decoration: underline wavy #fd7e14;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 6px;
+        }
+
+        /* 7. Soft Background Highlight */
+        .underline-bg {
+            background: linear-gradient(
+                to top,
+                rgba(13,110,253,.25) 45%,
+                transparent 45%
+            );
+            padding: 0 4px;
+        }
+
+        /* 8. SVG Curve Underline */
+        .underline-svg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'%3E%3Cpath d='M3 11 Q60 1 117 11' stroke='%230d6efd' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100% 14px;
+            padding-bottom: 10px;
+        }
+
+        /* ══════════════════════════════════════════
+           NEW 10
+        ══════════════════════════════════════════ */
+
+        /* 9. Neon Glow Underline */
+        .underline-neon {
+            position: relative;
+            display: inline-block;
+            color: #7c3aed;
+        }
+        .underline-neon::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%; height: 3px;
+            background: #7c3aed;
+            border-radius: 4px;
+            box-shadow: 0 0 8px #7c3aed, 0 0 20px #a78bfa, 0 0 40px #c4b5fd;
+        }
+
+        /* 10. Strikethrough + New Line */
+        .underline-cross {
+            position: relative;
+            display: inline-block;
+        }
+        .underline-cross::before {
+            content: "";
+            position: absolute;
+            left: -4px; top: 50%;
+            width: calc(100% + 8px); height: 3px;
+            background: #ef4444;
+            transform: translateY(-50%) rotate(-2deg);
+            border-radius: 3px;
+            opacity: .7;
+        }
+        .underline-cross::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 100%; height: 3px;
+            background: #16a34a;
+            border-radius: 3px;
+        }
+
+        /* 11. Animated Slide-In */
+        .underline-slide {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+        .underline-slide::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 0; height: 3px;
+            background: #0ea5e9;
+            border-radius: 3px;
+            animation: slideIn 1.4s cubic-bezier(.4,0,.2,1) forwards;
+            animation-delay: .3s;
+        }
+        @keyframes slideIn {
+            to { width: 100%; }
+        }
+
+        /* 12. Dotted Underline */
+        .underline-dotted {
+            border-bottom: 4px dotted #f59e0b;
+            padding-bottom: 4px;
+        }
+
+        /* 13. Rising Highlight */
+        .underline-rise {
+            background: linear-gradient(
+                to top,
+                rgba(20, 184, 166, .3) 55%,
+                transparent 55%
+            );
+            padding: 0 6px;
+            border-radius: 4px;
+        }
+
+        /* 14. Split Color Underline */
+        .underline-split {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        .underline-split::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, #f43f5e 50%, #3b82f6 50%);
+            border-radius: 4px;
+        }
+
+        /* 15. Box-Shadow Underline */
+        .underline-shadow {
+            display: inline-block;
+            padding-bottom: 6px;
+            box-shadow: 0 4px 0 0 #fbbf24;
+        }
+
+        /* 16. Bracket Underline */
+        .underline-bracket {
+            position: relative;
+            display: inline-block;
+            padding: 0 10px 6px;
+        }
+        .underline-bracket::before,
+        .underline-bracket::after {
+            content: "";
+            position: absolute;
+            bottom: 0; width: 8px; height: 100%;
+            border-bottom: 3px solid #6366f1;
+        }
+        .underline-bracket::before {
+            left: 0;
+            border-left: 3px solid #6366f1;
+            border-radius: 0 0 0 4px;
+        }
+        .underline-bracket::after {
+            right: 0;
+            border-right: 3px solid #6366f1;
+            border-radius: 0 0 4px 0;
+        }
+
+        /* 17. Handwritten Squiggle */
+        .underline-squiggle {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 14px;
+        }
+        .underline-squiggle::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%; height: 14px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='14'%3E%3Cpath d='M0 10 C25 2,50 14,75 7 S125 2,150 9 S175 14,200 7' stroke='%23ec4899' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: auto 100%;
+        }
+
+        /* 18. Offset Box */
+        .underline-offset-box {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .underline-offset-box::before {
+            content: "";
+            position: absolute;
+            left: 4px; bottom: -4px;
+            width: 100%; height: 100%;
+            border: 2px solid #10b981;
+            border-radius: 6px;
+            z-index: -1;
+        }
+        .underline-offset-box::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 100%; height: 100%;
+            background: rgba(16,185,129,.12);
+            border-radius: 4px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1 class="fw-black fs-2 mb-2">Bootstrap 5 Underline Highlight Styles</h1>
+        <p class="mb-0 fs-6">Complete collection of 18 modern CSS underline effects for headings, hero sections and highlighted text.</p>
+    </div>
+</div>
+
+<section class="pb-5">
+    <div class="container">
+
+        <!-- Section divider: Original 8 -->
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <span class="fs-6 fw-bold text-secondary">Original Set · 1–8</span>
+            <div class="flex-grow-1 border-top border-secondary-subtle"></div>
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <!-- 1 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">1 · Marker Underline</div>
+                    <h2 class="demo-title">
+                        Build Better
+                        <span class="underline-marker">WordPress Plugins</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">2 · Gradient Underline</div>
+                    <h2 class="demo-title">
+                        Create
+                        <span class="underline-gradient">Modern UI</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">3 · Rounded Underline</div>
+                    <h2 class="demo-title">
+                        Powerful
+                        <span class="underline-rounded">Laravel Tools</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">4 · Brush Underline</div>
+                    <h2 class="demo-title">
+                        Smart
+                        <span class="underline-brush">Developer Workflow</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">5 · Double Underline</div>
+                    <h2 class="demo-title">
+                        SEO
+                        <span class="underline-double">Optimized Content</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">6 · Zigzag Underline</div>
+                    <h2 class="demo-title">
+                        Fast
+                        <span class="underline-zigzag">Bootstrap Components</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">7 · Background Highlight</div>
+                    <h2 class="demo-title">
+                        Build
+                        <span class="underline-bg">Amazing SaaS</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">8 · SVG Curve Underline</div>
+                    <h2 class="demo-title">
+                        Advanced
+                        <span class="underline-svg">Analytics Dashboard</span>
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section divider: New 10 -->
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <span class="fs-6 fw-bold text-secondary">Extended Set · 9–18</span>
+            <div class="flex-grow-1 border-top border-secondary-subtle"></div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- 9 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">9 · Neon Glow</div>
+                    <h2 class="demo-title">
+                        Ship
+                        <span class="underline-neon">Purple Features</span>
+                        Fast
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">10 · Strikethrough + New Line</div>
+                    <h2 class="demo-title">
+                        <span class="underline-cross">Old Bugs</span>, New Fixes
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">11 · Animated Slide-In</div>
+                    <h2 class="demo-title">
+                        Deploy with
+                        <span class="underline-slide">Confidence</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">12 · Dotted Underline</div>
+                    <h2 class="demo-title">
+                        Clean
+                        <span class="underline-dotted">API Design</span>
+                        Matters
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">13 · Rising Highlight</div>
+                    <h2 class="demo-title">
+                        Scale Your
+                        <span class="underline-rise">SaaS Revenue</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">14 · Split Color</div>
+                    <h2 class="demo-title">
+                        Frontend
+                        <span class="underline-split">Meets Backend</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">15 · Box-Shadow Underline</div>
+                    <h2 class="demo-title">
+                        Zero-Config
+                        <span class="underline-shadow">WordPress Setup</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">16 · Bracket Underline</div>
+                    <h2 class="demo-title">
+                        Ship
+                        <span class="underline-bracket">Code Daily</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">17 · Handwritten Squiggle</div>
+                    <h2 class="demo-title">
+                        Human-First
+                        <span class="underline-squiggle">Product Design</span>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="col-lg-6">
+                <div class="demo-box">
+                    <div class="badge-num">18 · Offset Box</div>
+                    <h2 class="demo-title">
+                        Build
+                        <span class="underline-offset-box">Laravel Apps</span>
+                        Better
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
